@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*headerr*/
+
+header {
+    background-image: url("../img/title_undoukai.png");
+    background-position: center;
+    background-size: cover;
+    /* height: 160px; */
+    display: grid;
+    place-content: center;
+    gap: 16px;
+    padding: 24px;
+    /* background-color: pink; */
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 20px;
+    background-color: #fff;
+    opacity: .8;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+header > p {
+    text-align: center;
+    background-color: #fff;
+    opacity: .8;
+    padding: 16px;
+    border-radius: 16px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*nav*/
+
+nav {
+    background-color: skyblue;
+    width: 90%;
+    margin: 16px auto;
+    padding: 16px 24px;
+    border-radius: 16px;
+}
+
+nav h2 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 16px;
+    font-size: 20px;
+}
+
+nav ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,auto);
+    grid-auto-flow: column;
+    gap: 8px;
+}
+
+nav li::before {
+    margin-right: 8px;
+}
+
+nav .list-1::before {
+    content: '1.';
+    color: #fff;
+}
+
+nav .list-2::before {
+    content: '2.';
+    color: #fff;
+}
+
+nav .list-3::before {
+    content: '3.';
+    color: #fff;
+}
+
+nav .list-4::before {
+    content: '4.';
+    color: #fff;
+}
+
+nav .list-5::before {
+    content: '5.';
+    color: #fff;
+}
+
+nav .list-6::before {
+    content: '6.';
+    color: #fff;
+}
+
+/*container*/
+
+.container {
+    padding: 0 24px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 16px auto;
+    /* border: 2px solid blue; */
+}
+
+.content .pic {
+    margin-top: 24px;
+    height: 200px;
+}
+
+.content img {
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.text {
+    order: -1;
+}
+
+.text p {
+    line-height: 1.8;
+}
+
+/*gotop*/
+.gotop {
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+}
+
+.gotop a {
+    background-color: skyblue;
+    padding: 16px 24px;
+    border-radius: 16px;
+}
+
+/*footer*/
+
+footer {
+    background-color: skyblue;
+    padding: 32px 0;
+    text-align: center;
+}
+
+footer small {
+    color: #fff;    
+}
+
+@media (min-width: 600px) {
+
+    nav {
+        max-width: 1000px;
+    }
+
+    nav ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between;       
+    }
+
+    /*container*/
+
+
+    
+
+    .container .content {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+        flex-direction: row;
+        gap: 8px;
+        max-width: 1000px;
+    }
+
+    .content:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .content .text {
+        flex: 1;
+    }
+
+    .content .pic {
+        margin: 0;
+        object-fit: cover;
+        flex: 1;
+    }
+
+    .content img {
+        width: auto;
+        height: 100%;
+    }
+
+    
+
+}
+
+/*test*/
+
+.test {
+    .white {
+        background-color: red;
+    }
+}
